@@ -4,10 +4,13 @@
 pacman::p_load(dplyr, readr, stringr, readtext, tibble, lexicon, tidytext, quanteda, SnowballC, wordcloud2, ggwordcloud, purrr, fixest, tidyr, modelsummary, kableExtra)
 options(modelsummary_factory_default = 'kableExtra')
 
-source("./Scripts/ISO/4_0_Models_output_data_generation.R")
+# Set data directory (adjust this path to where your replication data is stored)
+if (!exists("data_dir")) data_dir <- "../../../Legitimacy/Data"
+
+source("scripts/03_models/4_0_Models_output_data_generation.R")
 
 ## UNGA Debates
-unga_files <- readtext(paste0("C:/Users/solvebjo/UiO Dropbox/Solveig Bjørkholt/Legitimacy/Data/TXT/*"), 
+unga_files <- readtext(paste0(data_dir, "/TXT/*"),
                        docvarsfrom = "filenames", 
                        dvsep = "_", 
                        docvarnames = c("country", "session", "year"))

@@ -12,7 +12,7 @@ con <- dbConnect(RSQLite::SQLite(), "../../../Legitimacy/Data/iso_standards.sqli
 standards <- dbReadTable(con, "standards_status")
 dbDisconnect(con)
 
-setwd("C:/Users/solvebjo/UiO Dropbox/Solveig Bjørkholt/Apps/Overleaf/Legitimacy_standards")
+# NOTE: Set working directory to the repository root before running this script.
 
 abstracts <- standards %>%
   rename(text = abstract) %>%
@@ -92,7 +92,7 @@ fetch_responses <- function(data, prompt, version, api_key, output_folder, model
   }
 }
 
-api_key <- "YOUR_KEY"
+api_key <- Sys.getenv("OPENAI_API_KEY")
 
 fetch_responses(data = abstracts,
                 model = "base",

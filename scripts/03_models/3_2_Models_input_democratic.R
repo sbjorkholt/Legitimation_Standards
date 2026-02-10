@@ -345,7 +345,7 @@ mods_p
 
 #save_kable(mods_p, file = "./Tables/iso_mod1_dem_physical.tex")
 
-pvalues_demin <- list(p1_demin_p, p2_demin_p, p3_demin_p, p4_demin_s,
+pvalues_demin <- list(p1_demin_p, p2_demin_p, p3_demin_p, p4_demin_p,
                        p1_demin_s, p2_demin_s, p3_demin_s, p4_demin_s)
 
 

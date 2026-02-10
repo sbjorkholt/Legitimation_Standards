@@ -2,12 +2,12 @@
 library(tidyverse)
 library(kableExtra)
 
-source("./Scripts/ISO/2_Make_data.R")
+source("scripts/02_data_preparation/2_Make_data.R")
 
-source("./Scripts/ISO/3_1_Models_input_technocratic.R")
-source("./Scripts/ISO/3_2_Models_input_democratic.R")
-source("./Scripts/ISO/4_1_Models_output_technocratic.R")
-source("./Scripts/ISO/4_2_Models_output_democratic.R")
+source("scripts/03_models/3_1_Models_input_technocratic.R")
+source("scripts/03_models/3_2_Models_input_democratic.R")
+source("scripts/03_models/4_1_Models_output_technocratic.R")
+source("scripts/03_models/4_2_Models_output_democratic.R")
 
 #### DEMOCRATIC INPUT LEGITIMATION ####
 

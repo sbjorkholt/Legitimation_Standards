@@ -4,15 +4,18 @@
 pacman::p_load(dplyr, readr, stringr, tidytext, quanteda, SnowballC, wordcloud2, purrr, fixest, tidyr, modelsummary, kableExtra)
 options(modelsummary_factory_default = 'kableExtra')
 
+# Set data directory (adjust this path to where your replication data is stored)
+if (!exists("data_dir")) data_dir <- "../../../Legitimacy/Data"
 
-source("./Scripts/ISO/4_0_Models_output_data_generation.R")
+
+source("scripts/03_models/4_0_Models_output_data_generation.R")
 
 ## Scopus
 
 # library(rscopus)
-# 
-# apikey <- "8052bb6262adb3216d2aca02f7eb5a8e" # REMOVE THIS WHEN SHARING!!!
-# 
+#
+# apikey <- Sys.getenv("SCOPUS_API_KEY")
+#
 # fetch_top_cited_articles <- function(subjarea) {
 #   query <- paste0("SRCTYPE(j) AND SUBJAREA(", subjarea, ") AND LANGUAGE(ENGLISH) AND PUBYEAR AFT 2003 AND PUBYEAR BEF 2023")
 #   search <- scopus_search(api_key = apikey, query = query, max_count = 1000, view = "COMPLETE", sort = "-citedby-count")
@@ -84,7 +87,7 @@ tech_ling1 <- tibble(token = c(paper_words %>% pull(token)),
 
 ## PatentView
 
-class_patents <- readRDS("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/PhD/Crap/class_patents.rds")
+class_patents <- readRDS(file.path(data_dir, "class_patents.rds"))
 
 patent_sentence <- class_patents %>%
   filter(patent_year > 2003 & patent_year < 2023) %>%
