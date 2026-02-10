@@ -8,13 +8,10 @@ Replication data available at: [Harvard Dataverse](https://dataverse.harvard.edu
 
 ## Overview
 
-This project investigates how the International Organization for Standardization (ISO) deploys different **legitimation strategies** depending on the type of standard being produced. It distinguishes between:
+This project investigates how the International Organization for Standardization (ISO) deploys different **legitimation strategies** depending on the type of standard being produced. The paper tests whether **physical standards** (technical specifications, interoperability) are associated with technocratic legitimation, while **societal standards** (safety, quality, social responsibility) are associated with democratic legitimation. The analysis operates on four dimensions:
 
 - **Technocratic legitimation**: justifying standards by appealing to expertise, efficiency, scientific knowledge, and innovation.
 - **Democratic legitimation**: justifying standards by appealing to participation, representation, equity, sustainability, and stakeholder engagement.
-
-The paper tests whether **physical standards** (technical specifications, interoperability) are associated with technocratic legitimation, while **societal standards** (safety, quality, social responsibility) are associated with democratic legitimation. The analysis operates on two dimensions:
-
 - **Input legitimation**: characteristics of who participates in standards development (R&D capacity of member countries; diversity of committee membership).
 - **Output legitimation**: the language used in ISO news articles to promote standards (dictionary-based text analysis and GPT-coded legitimation statements).
 
