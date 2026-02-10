@@ -329,7 +329,7 @@ coef_unicollab_physical <- broom::tidy(feols(unicollab ~ physical | year + commi
                                                data = tech_leg %>%
                                                  drop_na(unicollab) %>%
                                                  mutate(physical = scale(physical, center = TRUE, scale = TRUE),
-                                                        unicollab = scale(RESEARCHER, center = TRUE, scale = TRUE))),
+                                                        unicollab = scale(unicollab, center = TRUE, scale = TRUE))),
                                          conf.int = TRUE) %>% mutate(term = ifelse(term == "physical", "Uni-Industry collab.", NA))
 
 coef_scienceart_physical <- broom::tidy(feols(scienceart ~ physical | year + committee,
@@ -387,7 +387,7 @@ coef_unicollab_societal <- broom::tidy(feols(unicollab ~ societal | year + commi
                                              data = tech_leg %>%
                                                drop_na(unicollab) %>%
                                                mutate(societal = scale(societal, center = TRUE, scale = TRUE),
-                                                      unicollab = scale(RESEARCHER, center = TRUE, scale = TRUE))),
+                                                      unicollab = scale(unicollab, center = TRUE, scale = TRUE))),
                                        conf.int = TRUE) %>% mutate(term = ifelse(term == "societal", "Uni-Industry collab.", NA))
 
 coef_scienceart_societal <- broom::tidy(feols(scienceart ~ societal | year + committee,

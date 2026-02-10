@@ -39,6 +39,13 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
+# Credentials and API keys
+credentials/
+Credentials/
+*api_key*
+*.secret
+.env
+
 # pkgdown site
 docs/
 

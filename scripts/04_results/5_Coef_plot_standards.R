@@ -1,8 +1,8 @@
 
-source("./3_1_Models_input_technocratic.R")
-source("./3_2_Models_input_democratic.R")
-source("./4_1_Models_output_technocratic.R")
-source("./4_2_Models_output_democratic.R")
+source("scripts/03_models/3_1_Models_input_technocratic.R")
+source("scripts/03_models/3_2_Models_input_democratic.R")
+source("scripts/03_models/4_1_Models_output_technocratic.R")
+source("scripts/03_models/4_2_Models_output_democratic.R")
 
 library(tidyverse)
 
